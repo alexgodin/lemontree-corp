@@ -136,7 +136,8 @@
 <script>
   $(document).ready(function(){
     $("#show_slides").click(function(){
-      $('.slides').fadeIn('5s');
+      $('.slides').fadeIn(500);
+      $('.center p').animate({opacity:0, height: 0}, 500);
     })
   });
 </script>
