@@ -2,65 +2,97 @@
 <html>
 <head>
   <title>Lemontree Foods Inc.</title>
-  <link rel="stylesheet" type="text/css" href="/stylesheet.css">
-  <style type="text/css">
-  body {
-    font-family: dia;
-    background: #fff6e0;
-    color: #101727;
-  }
-  .center {
-    max-width: 400px;
-    position: fixed;
-    top: 25%;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  @media (min-width: 480px) {
-    .center {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      /* bring your own prefixes */
-      transform: translate(-50%, -50%);
-    }
-  }
-  img {
-    max-width: 150px;
-  }
-  a:link, a:visited, a:hover, a:active {
-    font-weight: bold;
-    text-decoration: underline;
-    color: #ff5838;
-  }
-  h1 {
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 90%;
-  }
-  p {
-    font-size: 15px;
-  }
-  </style>
+  <link rel="stylesheet" type="text/css" href="/fonts.css">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script>
+    function hideshow(to_hide,to_show) {
+      if(to_hide.is(':visible')){
+        to_hide.fadeOut(function(){
+          to_show.fadeIn();
+        })
+      }else{
+          to_show.fadeIn();
+      }
+    };
+    $(function() {
+      $("#donor-show").click(function () {
+        hideshow($('#team'),$('#donors'))
+        return false;
+      });        
+      $("#team-show").click(function () {
+        hideshow($('#donors'),$('#team'))
+        return false;
+      });        
+    });
+  </script>
 </head>
 <body>
-<div class="center">
-<img src="./logo.svg">
-<h1>Lemontree is a non-profit that sells family dinner.</h1>
-<p>Our systemic solution helps low-income families set the table with a dignified, affordable and healthy dinner. We deliver meal-kits with everything a mom or dad needs to cook a delicious meal for just $2 per serving.</p>
-
-<p>We have a new non-profit model that grows like a startup and operates sustainably at&nbsp;scale.</p>
-<div style="text-align: center; margin-top:10px; margin-bottom:10px;">
-<a href="./lemontree-overview.pdf">Read more</a> | <a href="https://www.meetup.com/Fight-Hunger-Now-And-Have-Fun-Doing-It/">Volunteer</a> 
-</div>
-<div style="text-align: center;">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="V4M4XQKFYBZ3Q">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+  <div class="center">
+    <img src="./logo.svg">
+    <h1>We believe everyone deserves an amazing&nbsp;dinner.</h1>
+    <p>In a previous life we sold family dinner (more in the <a href="https://www.wsj.com/articles/nonprofits-new-recipe-for-meal-kits-keeping-them-affordable-11556634600?mod=searchresults&page=1&pos=1">Wall Street Journal</a>).</p>
+    <p> As the COVID-19 pandemic struck New York, our nimble startup team pivoted to help save NYC's struggling emergency food system. Our first project, <a href="http://inittogether.nyc">In It Together</a> connects thousands of volunteers with more than 70 high-need organizations. Now, we're expanding and continuing our work.<p>
+      <p>As the next months and years unfold, we're commited to making dinner time more dignified, more delicious and more fun for low-income families. As we do this, we're big believers in the power of techonolgy and systems that scale. And we know that the best solutions come from listening to people who aren't like us.</p>
+      <p><a href="#" id="team-show">Our team</a> is supported by an incredible <a href="#" id="donor-show">family of donors</a> and we'd be absolutly honored if you would join them by <a href="https://inittogethernyc.typeform.com/to/t2MEjo">making a donation.</a></p>
+      <div id="team" style="display: none;">
+      <ul>
+        <li>Kasumi Quinlan</li>
+        <li>Raffaella Glasser</li>
+        <li>Austin King</li>
+        <li>Alex Godin</li>
+      </ul>
+      </div>
+      <div id="donors" style="display: none;">
+        <ul>
+          <li>Alan Tisch</li>
+          <li>Albert Wenger</li>
+          <li>Alex Pellegrini</li>
+          <li>Ali Thorne</li>
+          <li>Amit Lubling</li>
+          <li>Anonymous</li>
+          <li>Audrey Meyer</li>
+          <li>Brad Gillespie</li>
+          <li>Bradley Tusk</li>
+          <li>Brian O’Kelley</li>
+          <li>Chris Fralic</li>
+          <li>Dan Shipper</li>
+          <li>Danny Meyer</li>
+          <li>David Tisch</li>
+          <li>Elizabeth Rovere</li>
+          <li>Esther Dyson</li>
+          <li>Eugene Remm</li>
+          <li>Fernando Vigil</li>
+          <li>Henrik Werdelin</li>
+          <li>Hursh Agrawal</li>
+          <li>Ilana Glazer</li>
+          <li>Irma Fralic</li>
+          <li>Ilia Papas</li>
+          <li>Jenny Lee</li>
+          <li>Jesse Beyroutey</li>
+          <li>Joe Killian</li>
+          <li>Jonathan Chetrit</li>
+          <li>Josh Miller</li>
+          <li>Joshua Kushner</li>
+          <li>Kal Vepuri</li>
+          <li>Lisa Gansky</li>
+          <li>Luke Schaefer</li>
+          <li>Michael Tisch</li>
+          <li>Mette Walter Werdelin</li>
+          <li>Meeta Gournay</li>
+          <li>Nicholas Thorne</li>
+          <li>Sam Koppelman</li>
+          <li>Sam Blank</li>
+          <li>Scott Heiferman</li>
+          <li>Sheila Amara Smith</li>
+          <li>Susan Danziger</li>
+          <li>Swati Mylavarapu</li>
+          <li>Taryn Blank</li>
+          <li>The Robin Hood Foundation</li>
+          <li>Zara Terez Tisch</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
-</div>
-</div>
 </html>
