@@ -1,0 +1,112 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lemontree Virtual Flyering Letter</title>
+<link href="https://lemontreefoods.org/fonts.css" rel="stylesheet" type="text/css">
+<style>
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    width: 8.5in;
+    height: 11in;
+    margin: 0;
+    padding: 0;
+    /* your background image should have dimensions of 2588x3338 pixels. */
+    background-image: url('https://lemontreefoods.org/lob-bg-bw.png');
+    background-size: 8.5in 11in;
+    background-repeat: no-repeat;
+  }
+  .page {
+    page-break-after: always;
+    position: relative;
+    width: 8.5in;
+    height: 11in;
+  }
+  .page-content {
+    position: absolute;
+    width: 8.125in;
+    height: 10.625in;
+    left: 0.1875in;
+    top: 0.1875in;
+    background-color: rgba(0,0,0,0);
+  }
+  .text {
+    position: relative;
+    top: 317px;
+    width: 7in;
+    margin: 0 auto;
+    font-family: 'Dia';
+    font-size: 12pt;
+    line-height: 13pt;
+  }
+  .date {
+    float:right;
+  }
+  #footer {
+    position: absolute;
+    left:64px;
+    bottom: 32px;
+    font-family: 'Dia';
+    font-size: 10pt;
+    text-align: left;
+    color: #808080;
+  }
+  #line {
+    position: absolute;
+    left: 123px;
+    top: -20px;
+    width:5.5in;
+    height:5px;
+    border-top: 1px solid;
+  }
+  /* your main logo should have dimensions of at least 240x220 pixels. */
+  #main-logo {
+    position: absolute;
+    left: 515px;
+    top: 40px;
+    width: 2in;
+    height:.3in;
+  }
+
+  .highlight {
+        font-weight:bold;
+  }
+</style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="page-content">
+      <div id="main-logo"><img src="https://lemontreefoods.org/logo.svg" width="200px"></div>
+      <div class="text">
+        <span class="date">February 10, 2021</span>
+        <br><br>
+<p>{{First_Name}},</p>
+<p>Thank you for taking time to speak with me on the phone about Lemontree. We really appreciate your offer to help us support your low-income neighbors.</p>
+<p>As a small business owner, you play such an important role in the {{Neighborhood}} community. I’d love to add {{Business_Name}} to the coalition of local businesses fighting food insecurity in NYC.</p>
+<p> <span class="highlight">3 in 4 New Yorkers facing a food emergency doesn’t get help.</span> With all the resources available in NYC, there’s no reason not to. The Lemontree Food Helpline has connected thousands of our neighbors with free food, and you can help even more of them put dinner on the table.</p>
+<p>We’ve included a few flyers you can share with your community. Whether it’s posting on social media or hanging them up in the window, your support means the world to us. For some, it will mean the difference between a full belly and a growling stomach. You never know who needs the help.</p>
+<p>Thank you again for supporting your hungry neighbors, and for stepping up to show your neighborhood what you stand for. This past year has been tough, but New York is tougher. </p>
+<p><span class="highlight">To help make a difference, hang the attached flyers in a visible place in your store.</span></p>
+
+Thank you again,<br><br>
+{{Caller Name}}<br>
+
+      </div>
+      <div id="footer">
+        Lemontree Foods Inc.<br>
+        A 501(c)3 Organization <br>
+        EIN: 82-4540319 <br>
+        143 Lincoln Place<br>
+        Brooklyn, NY 11217<br>
+        (844) 995 0989
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
