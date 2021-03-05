@@ -1,0 +1,455 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lemontree Virtual Flyering Letter</title>
+    <link href="https://lemontreefoods.org/fonts.css" rel="stylesheet" type="text/css">
+    <style>
+        *, *:before, *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 8.5in;
+            height: 11in;
+            margin: 0;
+            padding: 0;
+            /* your background image should have dimensions of 2588x3338 pixels. */
+            background-image: url('https://lemontreefoods.org/lob-bg-bw.png');
+
+            background-color: #f7f9fa;
+
+            background-size: 8.5in 11in;
+            background-repeat: no-repeat;
+        }
+
+        .page {
+            page-break-after: always;
+            position: relative;
+            width: 8.5in;
+            height: 11in;
+
+            background-color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .page-content {
+            position: absolute;
+            width: 8.125in;
+            height: 10.625in;
+            left: 0.1875in;
+            top: 0.1875in;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .text {
+            position: relative;
+            top: 317px;
+            width: 7in;
+            margin: 0 auto;
+            font-family: 'Dia';
+            font-size: 12pt;
+            line-height: 13pt;
+        }
+
+        .date {
+            float: right;
+        }
+
+        .footer {
+            position: absolute;
+            left: 64px;
+            bottom: 32px;
+            font-family: 'Dia';
+            font-size: 10pt;
+            text-align: left;
+            color: #808080;
+        }
+
+        #line {
+            position: absolute;
+            left: 123px;
+            top: -20px;
+            width: 5.5in;
+            height: 5px;
+            border-top: 1px solid;
+        }
+
+        /* your main logo should have dimensions of at least 240x220 pixels. */
+        #main-logo {
+            position: absolute;
+            left: 515px;
+            top: 40px;
+            width: 2in;
+            height: .3in;
+        }
+
+        .main-logo-inner {
+            position: absolute;
+            left: 54px;
+            top: 37px;
+            /*width: 145.73px;*/
+            /*height: 46.12px;*/
+        }
+
+        .sub {
+            font-family: Dia;
+            font-weight: normal;
+            font-size: 15px;
+            letter-spacing: 0.02em;
+            line-height: 68.29px;
+            text-align: left;
+            position: absolute;
+            color: #0c0b15;
+            top: 80px;
+            left: 86px;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+
+        .text-inner {
+            position: relative;
+            top: 157px;
+            width: 7in;
+            margin: 0 auto;
+            font-family: 'Dia';
+            font-size: 12pt;
+            line-height: 13pt;
+        }
+
+        h1 {
+            font-family: Dia-Black;
+            font-weight: normal;
+            font-size: 80px;
+            letter-spacing: -0.03em;
+            line-height: 80px;
+            text-align: left;
+            color: #0c0b15;
+            margin: 0 0 22px;
+
+        }
+
+        h2 {
+            font-family: Dia;
+            font-weight: normal;
+            font-size: 50px;
+            letter-spacing: -0.03em;
+            line-height: 51px;
+            text-align: left;
+            color: #0c0b15;
+            margin: 0 0 70px;
+
+        }
+
+        .icons > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .icons img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .icons h3 {
+            font-family: DiaBold;
+            font-weight: normal;
+            font-size: 18px;
+            letter-spacing: 0.02em;
+            line-height: 18px;
+            text-align: center;
+            color: #0c0b15;
+        }
+
+        img.line {
+            background-color: transparent;
+            height: 1px;
+            width: 122px;
+            margin-top: 25px;
+            /*left: 22px;*/
+            /*position: absolute;*/
+            /*top: 48.46%;*/
+        }
+
+        .free-groceries .icon {
+            background-color: transparent;
+            height: 52px;
+            width: 38px;
+            /*left: 65px;*/
+            /*position: absolute;*/
+            /*top: calc(40.94% - 21px);*/
+        }
+
+        .govt-programs .icon {
+            background-color: transparent;
+            height: 52px;
+            width: 53px;
+            /*position: absolute;*/
+            /*right: calc(47.64% - 25px);*/
+            /*top: calc(40.90% - 21px);*/
+        }
+
+        .hot-meals .icon {
+            background-color: transparent;
+            height: 55px;
+            width: 59px;
+            /*position: absolute;*/
+            /*right: 31px;*/
+            /*top: calc(40.86% - 23px);*/
+        }
+
+        .banner {
+            width: 672px;
+            height: 239px;
+            border-radius: 12px;
+            background: url(./Asset%208@3x.png);
+            background-size: contain;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .banner h3 {
+            font-family: Dia;
+            font-weight: normal;
+            font-size: 18px;
+            letter-spacing: 0.01em;
+            line-height: 33.56px;
+            color: #fefadd;
+            position: absolute;
+            left: 240px;
+        }
+
+        .text-food {
+            font-family: Dia;
+            font-weight: normal;
+            font-size: 44.66px;
+            letter-spacing: -0.03em;
+            line-height: 43.65px;
+            color: #fefadd;
+            position: absolute;
+            left: 240px;
+            top: 60px;
+        }
+
+
+        .banner.banner-spanish h3 {
+            left: 190px;
+        }
+
+        .banner-spanish .text-food {
+            left: 190px;
+        }
+
+
+        .text-food strong {
+            font-family: 'DIA-BLACK';
+        }
+
+        .contacts {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            bottom: 20px;
+            position: absolute;
+            left: 240px;
+        }
+
+        .banner.banner-spanish .contacts {
+
+        }
+
+        .contacts span {
+            font-family: Dia;
+            font-weight: normal;
+            font-size: 15px;
+            letter-spacing: -0.03em;
+            line-height: 56px;
+            text-align: left;
+            color: #fecf09;
+        }
+
+        .contacts img {
+            height: 12px;
+            width: auto;
+        }
+
+        .contacts .phone {
+            margin-right: 20px;
+        }
+
+        .logos {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-1, .footer-2 {
+            font-family: Dia;
+            font-weight: normal;
+            font-size: 10px;
+            letter-spacing: 0.01em;
+            line-height: 12px;
+            text-align: center;
+            color: #0c0b15;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div id="page-1" class="page">
+    <div class="page-content">
+        <div id="main-logo"><img src="https://lemontreefoods.org/logo.svg" width="200px"></div>
+        <div class="text">
+            <span class="date">February 10, 2021</span>
+            <br><br>
+            <p>{{First_Name}},</p>
+            <p>Thank you for taking time to speak with me on the phone about Lemontree. We really appreciate your offer
+                to help us support your low-income neighbors.</p>
+            <p>As a small business owner, you play such an important role in the {{Neighborhood}} community. I’d love to
+                add {{Business_Name}} to the coalition of local businesses fighting food insecurity in NYC.</p>
+            <p><span class="highlight">3 in 4 New Yorkers facing a food emergency doesn’t get help.</span> With all the
+                resources available in NYC, there’s no reason not to. The Lemontree Food Helpline has connected
+                thousands of our neighbors with free food, and you can help even more of them put dinner on the table.
+            </p>
+            <p>We’ve included a few flyers you can share with your community. Whether it’s posting on social media or
+                hanging them up in the window, your support means the world to us. For some, it will mean the difference
+                between a full belly and a growling stomach. You never know who needs the help.</p>
+            <p>Thank you again for supporting your hungry neighbors, and for stepping up to show your neighborhood what
+                you stand for. This past year has been tough, but New York is tougher. </p>
+            <p><span class="highlight">To help make a difference, hang the attached flyers in a visible place in your store.</span>
+            </p>
+
+            Thank you again,<br><br>
+            {{Caller Name}}<br>
+
+        </div>
+        <div class="footer">
+            Lemontree Foods Inc.<br>
+            A 501(c)3 Organization <br>
+            EIN: 82-4540319 <br>
+            143 Lincoln Place<br>
+            Brooklyn, NY 11217<br>
+            (844) 995 0989
+        </div>
+    </div>
+</div>
+
+
+<div id="page-2" class="page">
+    <div class="page-content">
+        <div class="main-logo-inner"><img src="https://lemontreefoods.org/logo.svg" width="200px"></div>
+        <div class="sub">FOOD HELPLINE</div>
+
+        <div class="text-inner">
+            <div class="main-title">
+                <h1>Need Food?</h1>
+                <h2>We’re here to help.</h2>
+            </div>
+
+            <div class="icons" style="display: flex; justify-content: space-between; margin: 0 0 40px;">
+                <div class="free-groceries">
+                    <img class="icon" src="./Asset%203@3x.png" alt="">
+                    <img class="line" src="line-1@1x.png">
+                    <h3>Free Groceries</h3>
+                </div>
+                <div class="govt-programs">
+                    <img class="icon" src="./Asset%204@3x.png" alt="">
+                    <img class="line" src="line-1@1x.png">
+                    <h3>Gov’t Programs</h3>
+                </div>
+                <div class="hot-meals">
+                    <img class="icon" src="./Asset%205@3x.png" alt="">
+                    <img class="line" src="line-1@1x.png">
+                    <h3>Hot Meals</h3>
+                </div>
+            </div>
+
+            <div class="banner">
+                <h3>REAL PEOPLE STANDING BY</h3>
+                <div class="text-food">
+                    TEXT <strong>FOOD</strong>
+                    <br>
+                    TO <strong>90847</strong>
+                </div>
+
+                <div class="contacts">
+                    <div class="phone"><img src="Asset 2@3x.png" height="38" width="25"/><span>844-995-0989</span></div>
+                    <div class="www"><img src="Asset 7@3x.png" height="39" width="39"/><span>WWW.FOODHELPLINE.ORG</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-1">
+                LEMONTREE FOODS INC. IS A 501(C)(3) NON-PROFIT ORGANIZATION. OUR PARTNERS INCLUDE
+
+                <div class="logos"><img src="logos.png" width="300px"/></div>
+                <div style="font-size:10px; text-align: center;">AND HUNDREDS MORE</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="page-3" class="page">
+    <div class="page-content">
+        <div class="main-logo-inner"><img src="https://lemontreefoods.org/logo.svg" width="200px"></div>
+        <div class="sub">FOOD HELPLINE</div>
+
+        <div class="text-inner">
+            <div class="main-title">
+                <h1>¿Necesitas Comida?</h1>
+                <h2>Estamos aquí para ayudar.</h2>
+            </div>
+
+            <div class="icons" style="display: flex; justify-content: space-between; margin: 0 0 40px;">
+                <div class="free-groceries">
+                    <img class="icon" src="./Asset%203@3x.png" alt="">
+                    <img class="line" src="line-1@1x.png">
+                    <h3>Mercado Gratis</h3>
+                </div>
+                <div class="govt-programs">
+                    <img class="icon" src="./Asset%204@3x.png" alt="">
+                    <img class="line" src="line-1@1x.png">
+                    <h3>Programas Gubernamentales</h3>
+                </div>
+                <div class="hot-meals">
+                    <img class="icon" src="./Asset%205@3x.png" alt="">
+                    <img class="line" src="line-1@1x.png">
+                    <h3>Comidas Calientes</h3>
+                </div>
+            </div>
+
+            <div class="banner banner-spanish">
+                <h3>GENTE REAL ESTÁN ESPERANDO PARA AYUDARTE.</h3>
+                <div class="text-food">
+                    MSJ <strong>COMIDA</strong>
+                    <br>
+                    A <strong>90847</strong>
+                </div>
+
+                <div class="contacts">
+                    <div class="phone"><img src="Asset 2@3x.png" height="38" width="25"/><span>844-995-0989</span></div>
+                    <div class="www"><img src="Asset 7@3x.png" height="39" width="39"/><span>WWW.FOODHELPLINE.ORG</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-2">
+                LEMONTREE FOODS INC. ES UNA ORGANIZACIÓN SIN FINES DE LUCRO 501 (C) (3). NUESTROS SOCIOS INCLUYEN
+
+                <div class="logos"><img src="logos.png" width="300px"/></div>
+                <div style="font-size:10px; text-align: center;">Y MUCHOS MAS</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
