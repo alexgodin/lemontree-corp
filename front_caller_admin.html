@@ -8,15 +8,12 @@
         <div id="retoolContainer" style="width:100%; height:100%;"></div>
     </body>
     <script>
-        var rt = window.retool.RetoolDashboard(document.getElementById('retoolContainer'), 'https://lemontreeadmin.tryretool.com/embedded/public/8e4fcbcb-2b98-42fe-a879-25e6d927ed2e');
+        var rt = window.retool.RetoolDashboard(document.getElementById('retoolContainer'), 'https://lemontreeadmin.tryretool.com/apps/Front%20plugins/Rutabega%20mini%20-%20caller%20admin');
         const callerIdElement = document.getElementById('callerId');
         Front.contextUpdates.subscribe(context => {
             if(context.type == 'singleConversation'){
-                console.log("CALLER CHANGED")
-                console.log(context)
                 callerId.innerHTML = context.conversation.recipient.contact.customAttributes.filter((x) => x.name == 'caller_id')[0].value;
             }else{
-                console.log("NO CALLER SELECTED")
                 alert("No Caller Selected");
             }
         });
