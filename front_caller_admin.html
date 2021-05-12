@@ -1,15 +1,14 @@
-<!--caller admin & notes-->
 <html>
     <head>
         <script type="text/javascript" src="//dl.frontapp.com/libs/plugin-sdk-1.0.1.min.js"></script>
         <script src="https://cdn.tryretool.com/embed.js"> </script>
     </head>
     <body style="margin:0px 0px 0px 0px;">
-        <span id="callerId" ></span>
+        <span id="callerId" style="display: none;"></span>
         <div id="retoolContainer" style="width:100%; height:100%;"></div>
     </body>
     <script>
-        var rt = window.retool.RetoolDashboard(document.getElementById('retoolContainer'), 'https://lemontreeadmin.tryretool.com/embedded/public/e1f80c4e-adf7-46e4-bed2-b76d248c888f');
+        var rt = window.retool.RetoolDashboard(document.getElementById('retoolContainer'), 'https://lemontreeadmin.tryretool.com/embedded/public/8e4fcbcb-2b98-42fe-a879-25e6d927ed2e');
         const callerIdElement = document.getElementById('callerId');
         Front.contextUpdates.subscribe(context => {
             if(context.type == 'singleConversation'){
@@ -23,5 +22,3 @@
         });
     </script>
 </html>
-
-<!--referrals-->
