@@ -5,7 +5,7 @@
         <script src="https://cdn.tryretool.com/embed.js"> </script>
     </head>
     <body style="margin:0px 0px 0px 0px;">
-        <span id="callerId" style="display: none;"></span>
+        <span id="callerId" ></span>
         <div id="retoolContainer" style="width:100%; height:100%;"></div>
     </body>
     <script>
@@ -13,8 +13,11 @@
         const callerIdElement = document.getElementById('callerId');
         Front.contextUpdates.subscribe(context => {
             if(context.type == 'singleConversation'){
+                console.log("CALLER CHANGED")
+                console.log(context)
                 callerId.innerHTML = context.conversation.recipient.contact.customAttributes.filter((x) => x.name == 'caller_id')[0].value;
             }else{
+                console.log("NO CALLER SELECTED")
                 alert("No Caller Selected");
             }
         });
